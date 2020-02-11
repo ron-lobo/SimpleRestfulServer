@@ -8,15 +8,15 @@ import static spark.Spark.*;
 
 public class HelloWorldServer {
 
-    public static void main(String[] args) {
+	public static void main(String[] args) {
 
-        // get("/hello", (req, res) -> "Hello World");
+		// get("/hello", (req, res) -> "Hello World");
 
-        get(new Route("/hello") {
-            @Override
-            public Object handle(Request request, Response response) {
-                return "Hello World";
-            }
-        });
-    }
+		get(new Route("/hello") {
+			@Override
+			public Object handle(Request request, Response response) {
+				return "<html><body><h1>Hello World";
+			}
+		});
+	}
 }
